@@ -1,12 +1,12 @@
 ## Public Engagement
 
 *Contents*
-- [STARS 3.0 Energy and Climate Credit](#stars-30-food--dining-credit)
+- [STARS 3.0 Public Engagement Credit](#stars-30-food--dining-credit)
 - [Results](#results)
 - [Definitions](#stars-credit-definitions)
 - [Google Drive Folder](https://drive.google.com/drive/folders/1MpK4bpxYSuIs97QPZ0AMyqoNcxe-ACPu)
 
-### STARS 3.0 Energy and Climate Credit
+### STARS 3.0 Public Engagement Credit
 
 - EN 5: Continuing Education	
   - 5.1 Continuing education offerings in sustainability

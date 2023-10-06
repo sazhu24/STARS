@@ -10,12 +10,12 @@
 
 - AC 1: Sustainability Course Offerings	
   - 1.1 Percentage of academic departments with sustainability course offerings
-	- 1.2 Published sustainability course listings
-	- 1.3 Support for academic staff to integrate sustainability into the curriculum
+  - 1.2 Published sustainability course listings
+  - 1.3 Support for academic staff to integrate sustainability into the curriculum
 - AC 2: Undergraduate Programs	
   - 2.1 Institutional sustainability learning outcomes for undergraduate students
-	- 2.2 Undergraduate programs with sustainability-focused learning requirements
-	- 2.3 Percentage of undergraduate qualifications awarded that have sustainability-focused learning requirements
+  - 2.2 Undergraduate programs with sustainability-focused learning requirements
+  - 2.3 Percentage of undergraduate qualifications awarded that have sustainability-focused learning requirements
 - AC 3: Graduate Programs	
   - 3.1 Graduate programs with sustainability-focused learning requirements
 	- 3.2 Percentage of graduate qualifications awarded that have sustainability-focused learning requirements
