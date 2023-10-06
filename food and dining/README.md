@@ -1,4 +1,4 @@
-## AC Dining Analysis
+## Food & Dining
 
 *Contents*
 - [STARS 3.0 Food & Dining Credit](#stars-30-food--dining-credit)
