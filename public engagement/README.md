@@ -8,16 +8,20 @@
 
 ### STARS 3.0 Energy and Climate Credit
 
-*point distribution TBD*
-
-[**1) sustainably or ethically produced + plant-based**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.7wz6nkbm6esg)
-- % of food and beverage spend on products that are sustainably or ethically produced
-- % of food and beverage spend on plant-based foods
-
-[**2) social impact suppliers**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.daep987nhmhi)
-- % of dining service spend with social impact suppliers
-
-[**3) food recovery program**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.2epmtj4ei2qq) (not covered here)
+- EN 5: Continuing Education	
+  - 5.1 Continuing education offerings in sustainability
+- EN 6: Community Partnerships	
+  - 6.1 Sustainability-focused community partnerships
+  - 6.2 Partnerships to support underrepresented groups and vulnerable populations
+  - 6.3 Community partnership assessment
+- EN 7: Civic Engagement	
+  - 7.1 Percentage of students that participate in civic engagement programs
+  - 7.2 Employee community service program
+  - 7.3 Support for public policies to advance sustainability
+- EN 8: Shared Facilities	
+  - 8.1 Publicly shared facilities
+- EN 9: Inter-Campus Collaboration	
+  - 9.1 Inter-campus collaboration for sustainability
 
 see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
 see [definitions](#stars-credit-definitions)

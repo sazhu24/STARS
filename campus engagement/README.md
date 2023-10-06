@@ -8,16 +8,21 @@
 
 ### STARS 3.0 Campus Engagement Credit
 
-*point distribution TBD*
-
-[**1) sustainably or ethically produced + plant-based**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.7wz6nkbm6esg)
-- % of food and beverage spend on products that are sustainably or ethically produced
-- % of food and beverage spend on plant-based foods
-
-[**2) social impact suppliers**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.daep987nhmhi)
-- % of dining service spend with social impact suppliers
-
-[**3) food recovery program**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.2epmtj4ei2qq) (not covered here)
+- EN 1: Outreach and Communications	
+  - 1.1 Sustainability outreach and communications
+  - 1.2 Percentage of campus stakeholders reached through sustainability outreach and communications
+- EN 2: Co-Curricular Activities	
+  - 2.1 Student sustainability organization
+  - 2.2 Sustainability-focused co-curricular activities
+  - 2.3 Percentage of students that participate in sustainability activities
+- EN 3: Staff Engagement and Training	
+  - 3.1 Staff sustainability network or engagement program
+  - 3.2 Sustainability-focused training for employees
+  - 3.3 Percentage of employees that participate in sustainability activities
+- EN 4: Sustainability Culture Assessment	
+  - 4.1 Sustainability culture assessment design and administration
+  - 4.2 Percentage of students assessed for sustainability culture
+  - 4.3 Percentage of employees assessed for sustainability culture
 
 see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
 see [definitions](#stars-credit-definitions)
