@@ -1,2 +1,7 @@
-# STARS
-Repository for STARS 3.0 material.
+## Amherst College STARS Report
+
+[* Food & Dining ](https://github.com/eyzhang24/foodsystems)
+
+* Waste
+
+* Energy
