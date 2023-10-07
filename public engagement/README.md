@@ -23,7 +23,8 @@
 - EN 9: Inter-Campus Collaboration	
   - 9.1 Inter-campus collaboration for sustainability
 
-see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)..
+see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+
 see [definitions](#stars-credit-definitions)
 
 ## Results

@@ -8,18 +8,14 @@
 
 ### STARS 3.0 Investment Credit
 
-*point distribution TBD*
-
-[**1) sustainably or ethically produced + plant-based**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.7wz6nkbm6esg)
-- % of food and beverage spend on products that are sustainably or ethically produced
-- % of food and beverage spend on plant-based foods
-
-[**2) social impact suppliers**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.daep987nhmhi)
-- % of dining service spend with social impact suppliers
-
-[**3) food recovery program**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.2epmtj4ei2qq) (not covered here)
+- 10.1 Sustainable investment policy or committee
+- 10.2 Negative screening and divestment
+- 10.3 Investor engagement
+- 11.1 Investment holdings disclosure
+- 11.2 Percentage of the investment pool allocated to positive sustainability investments
 
 see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+
 see [definitions](#stars-credit-definitions)
 
 ## Results

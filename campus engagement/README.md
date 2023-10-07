@@ -24,7 +24,8 @@
   - 4.2 Percentage of students assessed for sustainability culture
   - 4.3 Percentage of employees assessed for sustainability culture
 
-see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)..
+see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+
 see [definitions](#stars-credit-definitions)
 
 ## Results

@@ -8,18 +8,25 @@
 
 ### STARS 3.0 Waste and Procurement Credit
 
-*point distribution TBD*
-
-[**1) sustainably or ethically produced + plant-based**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.7wz6nkbm6esg)
-- % of food and beverage spend on products that are sustainably or ethically produced
-- % of food and beverage spend on plant-based foods
-
-[**2) social impact suppliers**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.daep987nhmhi)
-- % of dining service spend with social impact suppliers
-
-[**3) food recovery program**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.2epmtj4ei2qq) (not covered here)
+- 9.1 Supplier code of conduct
+- 9.2 Percentage of bid solicitations that identify sustainability considerations
+- 9.3 Average weight given to sustainability considerations in bid appraisal
+- 9.4 Percentage of contract spend with social impact suppliers
+- 10.1 Percentage of cleaning products spend that meets sustainability criteria
+- 10.2 Percentage of electronics spend meets sustainability criteria
+- 10.3 Percentage of furniture spend that meets sustainability criteria
+- 10.4 Percentage of office paper spend that meets sustainability criteria
+- 11.1 Surplus and reuse programs
+- 11.2 Single-use disposable plastics program
+- 11.3 Electronic waste management
+- 11.4 Hazardous waste management and disclosure
+- 12.1 Non-hazardous waste generated per person
+- 12.2 Non-hazardous waste generated per square meter
+- 12.3 Percentage of non-hazardous waste diverted from disposal
+- 12.4 Percentage of construction and demolition waste diverted from disposal
 
 see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+
 see [definitions](#stars-credit-definitions)
 
 ## Results

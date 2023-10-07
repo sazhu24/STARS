@@ -8,18 +8,18 @@
 
 ### STARS 3.0 Energy and Climate Credit
 
-*point distribution TBD*
-
-[**1) sustainably or ethically produced + plant-based**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.7wz6nkbm6esg)
-- % of food and beverage spend on products that are sustainably or ethically produced
-- % of food and beverage spend on plant-based foods
-
-[**2) social impact suppliers**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.daep987nhmhi)
-- % of dining service spend with social impact suppliers
-
-[**3) food recovery program**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.2epmtj4ei2qq) (not covered here)
+- 5.1 Energy consumption per square meter
+- 5.2 Energy consumption per person
+- 5.3 Percentage of energy from renewable sources
+- 5.4 Percentage of electricity from on-site or certified renewable sources
+- 6.1 Greenhouse gas emissions inventory and disclosure
+- 6.2 Greenhouse gas emissions per square meter
+- 6.3 Greenhouse gas emissions per person
+- 6.4 Adjusted net greenhouse gas emissions per square meter
+- 6.5 Adjusted net greenhouse gas emissions per person
 
 see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+
 see [definitions](#stars-credit-definitions)
 
 ## Results

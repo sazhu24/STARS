@@ -8,18 +8,18 @@
 
 ### STARS 3.0 Wellbeing & Work
 
-*point distribution TBD*
-
-[**1) sustainably or ethically produced + plant-based**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.7wz6nkbm6esg)
-- % of food and beverage spend on products that are sustainably or ethically produced
-- % of food and beverage spend on plant-based foods
-
-[**2) social impact suppliers**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.daep987nhmhi)
-- % of dining service spend with social impact suppliers
-
-[**3) food recovery program**](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.2epmtj4ei2qq) (not covered here)
+- 12.1 Student wellbeing programs
+- 12.2 Employee wellbeing programs
+- 12.3 Smoke free environments
+- 13.1 Number of weeks of paid maternity leave
+- 13.2 Percentage of employees eligible for paid all-gender family/medical leave
+- 13.3 Published measures to protect employee rights
+- 14.1 Internal pay equity assessment
+- 14.2 Percentage of employees that receive a living wage
+- 14.3 Percentage of significant contractors that pay a collectively determined or living wage
 
 see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+
 see [definitions](#stars-credit-definitions)
 
 ## Results
