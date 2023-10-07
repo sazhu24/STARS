@@ -18,7 +18,7 @@
 	- 8.3 Inter-campus collaboration for responsible research and innovation
 	- 8.4 Support for open access publishing
 
-see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)..
 see [definitions](#stars-credit-definitions)
 
 ## Results

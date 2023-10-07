@@ -25,7 +25,7 @@
   - 5.1 Sustainability literacy assessment design and administration
 	- 5.2 Percentage of students assessed for sustainability literacy
 
-see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)..
 see [definitions](#stars-credit-definitions)
 
 ## Results
