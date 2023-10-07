@@ -6,6 +6,8 @@
 - [Definitions](#stars-credit-definitions)
 - [Google Drive Folder](https://drive.google.com/drive/folders/1MpK4bpxYSuIs97QPZ0AMyqoNcxe-ACPu)
 
+------
+
 ### STARS 3.0 DEI Credit
 
 - 4.1 DEI staff
@@ -25,9 +27,11 @@
 - 9.2 Completion rate for students with marginalized gender identities
 - 9.3 Percentage of marginalized racial, ethnic, and/or Indigenous groups with equitable completion rates
 
-see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
+see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)  
 
 see [definitions](#stars-credit-definitions)
+
+------ 
 
 ## Results
 

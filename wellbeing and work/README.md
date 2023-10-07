@@ -6,6 +6,8 @@
 - [Definitions](#stars-credit-definitions)
 - [Google Drive Folder](https://drive.google.com/drive/folders/1MpK4bpxYSuIs97QPZ0AMyqoNcxe-ACPu)
 
+------
+
 ### STARS 3.0 Wellbeing & Work
 
 - 12.1 Student wellbeing programs
@@ -18,9 +20,10 @@
 - 14.2 Percentage of employees that receive a living wage
 - 14.3 Percentage of significant contractors that pay a collectively determined or living wage
 
-see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)
-
+see [complete documentation](https://docs.google.com/document/d/1UgIhYWWg5GS7cB9qYvRpw76-ThuQZJ2X1spEiS1fp_U/edit#heading=h.43oau9mq61o0)  
 see [definitions](#stars-credit-definitions)
+
+------
 
 ## Results
 
