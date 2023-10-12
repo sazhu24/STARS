@@ -15,7 +15,7 @@
   - 1.2 Published sustainability course listings
   - 1.3 Support for academic staff to integrate sustainability into the curriculum
 - AC 2: Undergraduate Programs	
-  - 2.1 Institutional sustainability learning outcomes for undergraduate students
+  - ~~2.1 Institutional sustainability learning outcomes for undergraduate students~~
   - 2.2 Undergraduate programs with sustainability-focused learning requirements
   - 2.3 Percentage of undergraduate qualifications awarded that have sustainability-focused learning requirements
 - ~~AC 3: Graduate Programs~~
@@ -35,22 +35,22 @@ see [definitions](-stars-credit-definitions)
 ## Data
 
 ### AC 1: Sustainability Course Offerings	
-  - 1.1 Percentage of academic departments with sustainability course offerings
-  - 1.2 Published sustainability course listings
-  - 1.3 Support for academic staff to integrate sustainability into the curriculum
-  
+**1.1 Percentage of academic departments with sustainability course offerings**
+
+**1.2 Published sustainability course listings**
+
+**1.3 Support for academic staff to integrate sustainability into the curriculum**
   
 ### AC 2: Undergraduate Programs	
-  - 2.1 Institutional sustainability learning outcomes for undergraduate students
-  - 2.2 Undergraduate programs with sustainability-focused learning requirements
-  - 2.3 Percentage of undergraduate qualifications awarded that have sustainability-focused learning requirements
+**2.2 Undergraduate programs with sustainability-focused learning requirements**
+**2.3 Percentage of undergraduate qualifications awarded that have sustainability-focused learning requirements**
   
   
 ### AC 4: Applied Learning	
-  - 4.1 Applied learning for sustainability program.
+**4.1 Applied learning for sustainability program**
   
   
 ### AC 5: Sustainability Literacy	
-  - 5.1 Sustainability literacy assessment design and administration
-  - 5.2 Percentage of students assessed for sustainability literacy
+**5.1 Sustainability literacy assessment design and administration**
+**5.2 Percentage of students assessed for sustainability literacy**
 
