@@ -159,6 +159,9 @@ cleanWorkdayCourses <- function(df, semester, semester_order){
 }
 
 apply_context_dependency <- function(tt) {
+  
+  corrections <- read_csv("data/keywords/context_dependencies.csv")
+  
   tt <- tolower(tt)
   corrections$before <- tolower(corrections$before)
   corrections$after <- tolower(corrections$after)
@@ -206,6 +209,38 @@ cleanHits <- function(df){
   return(master_course_sdg_data)
 }
 
+getHits <- function(df){
+  # get usc keyword list
+  usc_pwg_keywords <- read.csv("data/keywords/usc_keywords.csv") %>% 
+    filter(remove != 'x')
+  
+  usc_pwg_keywords <- usc_pwg_keywords[-grep("#", usc_pwg_keywords$keyword),]
+  usc_pwg_keywords <- usc_pwg_keywords[!duplicated(usc_pwg_keywords),]
+  
+  # create system for text2sdg
+  usc_pwg_system <- usc_pwg_keywords %>%
+    mutate(system = "usc_pwg",
+           query = paste0('"', keyword, '"')) %>%
+    rename(sdg = goal) %>%
+    select(system, sdg, query)
+  
+  # detect SDGs using all five systems
+  hits_text2sdg <- detect_sdg_systems(df$cleaned_description,
+                                      system = c("Aurora", "Elsevier", "SIRIS", "SDSN", "SDGO"))
+  
+  hits_USC <- detect_any(text = df$cleaned_description, 
+                         system = usc_pwg_system)
+  
+  hits_text2sdg <- cleanHits(hits_text2sdg)
+  hits_USC <- cleanHits(hits_USC)
+  
+  # combine
+  allHits <- hits_USC %>% 
+    rbind(hits_text2sdg) %>% 
+    arrange(goal) 
+  
+  return(allHits)
+}
 
 ### sustainability classification ###
 # function returns sustainability classification based on list of goals (SDGs):
