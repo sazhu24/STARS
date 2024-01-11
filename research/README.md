@@ -15,7 +15,8 @@
   - 6.2 Incentives for sustainability research
 - AC 7: Center for Sustainability Research	
   - 7.1 Organized sustainability research center, institute, or unit
-- AC 8: Responsible Research and Innovation	8.1 Published ethical code of conduct for research
+- AC 8: Responsible Research and Innovation	
+  - 8.1 Published ethical code of conduct for research
 	- 8.2 Recognition of integrated, community-based, and extra-academic research
 	- 8.3 Inter-campus collaboration for responsible research and innovation
 	- 8.4 Support for open access publishing
