@@ -1,0 +1,326 @@
+---
+title: "Campus Sustainability Survey"
+output: html_document
+date: "2023-12-16"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggthemes)
+library(showtext)
+library(billboarder)
+library(highcharter)
+library(splitstackshape)
+```
+
+
+```{r, echo = FALSE, warning = FALSE}
+font_add("outfit", "/Users/sara/Documents/fonts/Outfit/outfit.ttf")
+font_add("alata", "/Users/sara/Documents/fonts/Alata/alata.ttf")
+font_add("josefin_sans", "/Users/sara/Documents/fonts/Josefin_Sans/JosefinSans.ttf")
+font_add("jost", "/Users/sara/Documents/fonts/Jost/Jost.ttf")
+showtext_auto()
+```
+
+
+```{r, echo = FALSE}
+pal <- c("#54c4c4", "#ACF7C1", "#abdbe3", "#235789", "#78C0E0", "#cacbcc")
+  
+pal3 <- c("#ACF7C1", "#aec7fc", "#54c4c4", "#ACF7C1", "#abdbe3", 
+          "#1e81b0", "#94BFBE", "#3C4F76", "#C2FCF7", "#C9FBFF", 
+          "#57737A", "#85BDBF", "#33A1FD", "#235789", "#78C0E0")
+
+pal2 <- c("#235789", "#aec7fc", "#54c4c4", "#1e81b0", "#3C4F76", 
+          "#C2FCF7", "#ACF7C1", "#85BDBF", "#33A1FD", "#78C0E0")
+  
+```
+
+
+```{r}
+survey <- read.xlsx('/Users/sara/Desktop/R/STARS/survey/Sustainability Campus Survey_January 4, 2024_03.06.xlsx') %>% 
+  janitor::clean_names()
+
+df <- survey %>% 
+  filter(status == 'IP Address'|status == 'Response Type') %>% 
+  mutate(name = paste(recipient_first_name, recipient_last_name))
+
+df <- df[, -c(1:4, 7:17, 84)] 
+
+df <- df %>% 
+  mutate(across(c(q11, q42), ~ sub('.*>', '', .x))) %>% 
+  rename(score = sc0, comments = q42, role = q2, transportation_mode = q11, gender = q116, staff_years = q4, class_year = q5, major = q6) %>% 
+  select(name, type, role, score, comments, race, gender, class_year, major, staff_years, progress, duration_in_seconds, everything()) %>% 
+  mutate(staff_years = sub('&gt;', '>', staff_years))
+
+```
+
+
+```{r, echo = FALSE}
+questions <- df[1, ]
+questions <- questions %>% 
+  mutate(across(c(gender, q114), ~ gsub('(Select all that apply) - Selected Choice', '(SAA)', .x)),
+         across(c(gender, q114), ~ gsub('(Select all that apply)', '(SAA)', .x)),
+         across(c(gender, q114), ~ gsub('(Select all that&#xa;apply)', '(SAA)', .x)))
+
+df2 <- df[-1, ]
+
+transportation <- df2 %>% 
+  select(c(name:staff_years, "q7", "q81", "q82", "q84", "q84_5_text", "q9_1", "transportation_mode", "q11_7_text", "q12_1", 
+           "q12_2", "q12_3", "q12_4", "q12_5", "q12_6", "q12_7", "q12_7_text", "q85", "q13_1", "q14", "q14_4_text", "q15"))
+
+culture <- df2 %>% 
+  select(c(name:staff_years, "q86", "q91", "q91_5_text", "q88", "q90", "q89", "q92", "q93", "q94", "q95", "q96", "q119_1", "q119_2", "q119_3",
+           "q119_4", "q119_5", "q97_1", "q97_2", "q97_3", "q99_1", "q99_2", "q99_3", "q99_4")) 
+
+literacy <- df2 %>% 
+  select(c(name:staff_years, "q25", "q100", "q101", "q102", "q103", "q104", "q106", "q107", "q108", "q109", "q110", "q111", "q112", "q113", "q114")) 
+
+```
+
+
+### **highcharter**
+
+
+```{r, echo = FALSE, warning = FALSE, fig.width = 9, fig.height = 6}
+plot_single <- function(data, colName, type = 'bar', name = 'Answers', multiChoice = TRUE, top = 0, round = 0) {
+  
+  col <- names(select(data, {{ colName }} ))
+  
+  data <- data %>% 
+      filter({{ colName }} != '') 
+  
+  if(multiChoice){
+    data <- cSplit(data, col, direction = 'long')
+  } 
+  
+  result <- data %>%
+    group_by({{ colName }}) %>%
+    summarise(count = n()) %>% 
+    arrange(-count)
+  
+  if(top > 0){
+    result <- result[1:top,]
+  }
+  
+  names(result) <- c('categories', 'count')
+  num_responses <- nrow(data)
+  plot_subtitle <- paste('Total Responses:', num_responses)
+
+  question <- questions %>% select({{ colName }})
+  plot_title <- paste(question[1, 1])
+  
+  options(highcharter.theme = hc_theme_smpl(tooltip = list(valueDecimals = round)))
+  
+  if(type == 'bar'){
+    plot <- highchart() %>% 
+      hc_add_series(type = "bar", data = result, dataSorting = list(enabled = T, matchByName = T),
+                    hcaes(x = 'categories', y = 'count'), name = name) %>% 
+      hc_xAxis(type = 'category',
+               labels = list(style = list(fontSize = "12px"))) %>%
+      hc_yAxis(stackLabels = list(enabled = TRUE)) %>% 
+      hc_tooltip(useHTML = TRUE, pointFormat = '{series.name} </br> {point.y} ({point.percentage:.0f}%)') %>% 
+      hc_title(text = plot_title, align = "center") %>% 
+      hc_subtitle(text = plot_subtitle, align = "center", style = list(fontSize = "16px")) %>% 
+      hc_add_theme(
+        hc_theme(
+          colors = c("#78C0E0", "#78C0E0"),
+          chart = list(style = list(fontFamily = "Jost", fontSize = "2rem")),
+          title = list(style = list(fontFamily = "Alata")) 
+          )
+        ) %>% 
+      hc_chart(margin = c(70, 70, 70, 130)) %>% 
+      hc_legend(verticalAlign = "top", align = "right", y = -40, x = -40,
+                labels = list(style = list(fontSize = "12px")))
+    
+  } else if(type == 'pie'){
+    plot <- highchart() %>% 
+      hc_add_series(type = "pie", data = result, hcaes(categories, count), 
+                  size = "60%", name = 'Answers', center = c(50, 50), 
+                  dataLabels = list(distance = 10, format = '{point.name}: {point.percentage:.1f} %')) %>% 
+      hc_title(text = plot_title, align = "center", style = list(fontSize = "18px")) %>% 
+      hc_subtitle(text = plot_subtitle, align = "center", style = list(fontSize = "18px"))
+  }
+  
+  
+  return(plot)
+}
+
+```
+
+```{r, echo = FALSE, warning = FALSE, fig.width = 9, fig.height = 6}
+plot_single(df2, role, type = 'bar', name = 'Role')
+
+plot_single(df2, major, type = 'bar', top = 8, name = 'Major(s)')
+
+plot_single(df2, class_year, type = 'bar',  multiChoice = FALSE, name = 'Class Year')
+
+plot_single(df2, gender, type = 'bar', name = 'Gender')
+```
+
+
+```{r, echo = FALSE, warning = FALSE, fig.width = 10, fig.height = 6}
+plot_multi <- function(data, colName, groupName, type = 'bar', multiChoice = TRUE, top = 0, round = 0) {
+  
+  col <- names(select(data, {{ colName }} ))
+  
+  data <- data %>% 
+      filter({{ colName }} != '') 
+  
+  if(multiChoice){
+    data <- cSplit(data, col, direction = 'long')
+  } 
+  
+  result <- data %>%
+    group_by({{colName}}, {{groupName}}) %>%
+    summarise(count = n()) %>% 
+    arrange(-count)
+  
+  if(top > 0){
+    result <- result[1:top,]
+  }
+  
+  names(result) <- c('categories', 'group', 'count')
+  num_responses <- nrow(data)
+  plot_subtitle <- paste('Total Responses:', num_responses)
+
+  question <- questions %>% select({{ colName }})
+  plot_title <- paste(question[1, 1])
+
+  if(type == 'bar'){ 
+    plot <- highchart() %>% 
+      hc_add_series(type = "bar", data = result, 
+                    hcaes(x = 'categories', y = 'count', group = 'group')) %>% 
+      hc_xAxis(type = 'category',
+               labels = list(style = list(fontSize = "12px"))) %>%
+      hc_yAxis(stackLabels = list(enabled = TRUE)) %>% 
+      hc_plotOptions(bar = list(stacking = 'normal'),
+                     dataSorting = list(enabled = T, matchByName = T)) %>% 
+      hc_tooltip(useHTML = TRUE, pointFormat = '{series.name} </br> {point.y} ({point.percentage:.0f}%)') %>% 
+      hc_title(text = plot_title, align = "center") %>% 
+      hc_subtitle(text = plot_subtitle, align = "center", style = list(fontSize = "16px")) %>% 
+      hc_add_theme(
+        hc_theme(
+          colors = c("#ACF7C1", "#235789", "#78C0E0"),
+          chart = list(style = list(fontFamily = "Jost", fontSize = "2rem")),
+          title = list(style = list(fontFamily = "Alata")) 
+          )
+        ) %>% 
+      hc_chart(margin = c(70, 70, 70, 130)) %>% 
+      hc_legend(verticalAlign = "top", align = "right", y = -40, x = -40,
+                labels = list(style = list(fontSize = "12px")))
+
+  
+  } 
+  
+  return(plot)
+}
+
+```
+
+
+```{r, echo = FALSE, warning = FALSE, fig.width = 9, fig.height = 6}
+plot_multi(data = culture, groupName = role, colName = race, multiChoice = F)
+plot_multi(data = culture, groupName = role, colName = staff_years, multiChoice = F)
+```
+
+Engagement
+
+```{r, echo = FALSE, warning = FALSE, fig.width = 9, fig.height = 6}
+plot_multi(data = culture, groupName = role, colName = q86, multiChoice = F)
+
+questions[1, 'q81']
+'(Select all that&#xa;apply)'
+'(Select all that apply) - Selected Choice'
+plot_multi(data = culture, groupName = role, colName = q91, multiChoice = T)
+plot_multi(data = culture, groupName = role, colName = q88, multiChoice = T)
+plot_multi(data = culture, groupName = role, colName = q90, multiChoice = T)
+plot_multi(data = culture, groupName = role, colName = q92, multiChoice = T)
+
+```
+
+
+Transportation
+
+```{r, echo = FALSE, warning = FALSE, fig.width = 9, fig.height = 6}
+# qplot(data = culture, groupName = role, colName = q97_1, multiChoice = F)
+# qplot(data = culture, groupName = role, colName = q86, multiChoice = F)
+plot_multi(data = transportation, groupName = role, colName = transportation_mode, multiChoice = T)
+```
+
+
+
+
+
+### **ggplot**
+
+```{r, include = FALSE, warning = FALSE, fig.width = 8, fig.height = 5}
+## plot
+p1 <- ggplot(data = df2, aes(x = type, fill = type)) +
+      geom_bar() +
+      labs(x = "", y = "# of Responses", 
+           title = "What is your role at Amherst?",
+           #subtitle = "4/18/23 - 6/3/23"
+           ) + 
+      scale_fill_manual(values = pal) +
+      theme(axis.title.y = element_text(vjust = 3.5, size = 12),
+            axis.text = element_text(size = 12),
+            plot.margin = unit(c(.4,.5,.7,.5), "cm"),
+            text = element_text(family = "jost")) +
+      #scale_y_continuous(limits = c(0, 290)) +
+      coord_flip() +
+      theme(legend.position = "none") +
+      theme(axis.text.y = ggtext::element_markdown(size = 10),
+            legend.position = "none") 
+      #geom_text(aes(label = type), hjust = -0.5)
+
+# png(file = "charts/plot1.png", width = 900, height = 600, units = "px")
+# print(p1)
+# dev.off()
+
+p1
+```
+
+
+
+```{r, include = FALSE, warning = FALSE, fig.width = 8, fig.height = 5}
+qplot <- function(data, colName) {
+  
+  result <- data %>%
+    filter({{ colName }} != '') %>% 
+    group_by({{ colName }}) %>%
+    summarise(count = n()) 
+  
+  num_responses <- sum(result$count)
+
+  question <- questions %>% select({{ colName }})
+  plot_title <- paste(question[1, 1])
+  
+  plot <- ggplot(result, 
+    aes(x = reorder({{ colName }}, count), y = count, fill = {{ colName }})) +
+    geom_bar(stat = "identity") +
+    labs(x = "", y = "# of Responses", 
+         title = plot_title,
+         subtitle = paste(num_responses, 'Total Responses')
+         ) + 
+    scale_fill_manual(values = pal2) +
+    theme(axis.title.y = element_text(vjust = 3.5, size = 12),
+          axis.text = element_text(size = 12),
+          plot.margin = unit(c(.4,.5,.7,.5), "cm"),
+          text = element_text(family = "jost")) +
+    #scale_y_continuous(limits = c(0, 290)) +
+    coord_flip() +
+    theme(legend.position = "none") +
+    theme(axis.text.y = ggtext::element_markdown(size = 10),
+          legend.position = "none") 
+  
+  return(plot)
+}
+
+qplot(df2, race)
+```
+
+
+
+
+
