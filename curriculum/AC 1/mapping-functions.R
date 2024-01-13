@@ -1,7 +1,7 @@
 
 ### functions ###
 
-cleanWorkdayCourses <- function(df, semester, semester_order){
+cleanSemester <- function(df, semester, semester_order){
   
   cf <- df %>% 
     mutate(course_name = ifelse(grepl('^[A-Z]{4} [0-9]{3}-', course), course, ''),
@@ -158,6 +158,38 @@ cleanWorkdayCourses <- function(df, semester, semester_order){
   
 }
 
+bindSemesters <- function(df_list){
+  
+  # combine all semesters
+  all_courses <- bind_rows(df_list) %>% 
+    # account for courses that change ids between semesters
+    mutate(ids = gsub('ENST 314 / SOCI 314', 'ENST 272 / SOCI 272', ids),
+           course = str_replace(course, '(Dis|Discussion|Dis\\.|Lab|w/Lab|W/Lab)$', '')) %>% 
+    arrange(semester_order) %>% 
+    group_by(ids) %>% 
+    summarise(course = dplyr::last(course),
+              professors = paste(unique(professors), collapse = ", "),
+              description = dplyr::last(description),
+              cleaned_description = dplyr::last(cleaned_description),
+              num = n(),
+              semesters = paste(semester, collapse = ", "),
+              semester_order = paste(semester_order, collapse = ", "),) %>% 
+    ungroup() %>% 
+    arrange(semester_order) %>% 
+    group_by(course) %>% 
+    summarise(name = dplyr::last(course),
+              ids = dplyr::last(ids),
+              semesters = paste(semesters, collapse = ", "),
+              professors = paste(unique(professors), collapse = ", "),
+              description = dplyr::last(description),
+              cleaned_description = dplyr::last(cleaned_description)) %>% 
+    mutate(cleaned_description = apply_context_dependency(cleaned_description),
+           professors = trimws(gsub('^,', ' ', professors))) %>% 
+    # remove duplicate listings for professors
+    getUniqueList('professors')
+  
+}
+
 apply_context_dependency <- function(tt) {
   
   corrections <- read_csv("data/keywords/context_dependencies.csv")
@@ -174,12 +206,15 @@ apply_context_dependency <- function(tt) {
 
 getUniqueList <- function(df, col){
   df_col <- df[col][[1]]
-  k <- strsplit(df_col, ",")
-  k <- map(k, str_trim)
-  k <- map(k, unique)
-  k <- map(k, str_remove, "NA")
+  
+  k <- strsplit(df_col, ",") %>% 
+    map(str_trim) %>% 
+    map(unique) %>% 
+    map(str_remove, "NA")
+  
   df[col][[1]] <- map(k, str_c, collapse = ', ') 
   df[col][[1]] <- gsub(', $', '', df[col][[1]])
+  
   return(df)
 }
 
